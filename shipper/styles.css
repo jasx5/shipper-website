@@ -1,0 +1,480 @@
+
+@import url(https://fonts.googleapis.com/earlyaccess/scheherazade.css);
+/*font-family: 'Scheherazade', serif;*/
+
+
+body{
+  font-family: Cairo;
+  font-size:20px;
+}
+:root {
+  --main-bg-color: #d3dbd8;
+  --main-text-color: #ffffff; /* icons at the top*/
+  --second-text-color: #bbbec5;
+  --second-bg-color: #f3f0f0;
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.second-text {
+  color: var(--second-text-color);
+}
+
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+  background-color: var(--second-bg-color);
+}
+
+.card {
+  border-radius: 100% !important;
+}
+
+#wrapper {
+  overflow-x: hidden;
+  background-color: #F9FAFB;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--main-text-color);
+  font-weight: bold;
+  border: none;
+}
+
+@media (min-width: 368px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-right: -16rem;
+  }
+  
+}
+
+/*Custom*/
+#logo{
+  width: 190px;
+}
+
+.table-width{
+  width: 730px !important;
+}
+#mada{
+  width:270px;
+}
+
+#wallet{
+  width:90px;
+}
+.title {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #999;
+	text-align: center;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: 300;
+	color: #413939;
+}
+
+.dropzone {
+	/* width: 100px;
+	height: 80px; */
+	border: 1px dashed #999;
+	border-radius: 3px;
+	text-align: center;
+}
+.d-inline{
+  display: inline-flex !important;
+}
+
+@media (min-width: 1024px) {
+
+  .payment_table{
+    width: 850px !important;
+  }
+  .payment-card{
+    width: auto !important; }
+
+  .side-card{
+    padding-right: 93px;
+    }
+}
+
+.card{
+  border: 2px solid #ffffff;
+  border-radius: 30px !important;
+  }
+
+#btn01{
+  border: 0 !important;
+  background-color: white;
+}
+.btn-option:hover{
+  border-radius: 3px;
+  border: 2px solid red; /* Transparent border initially */}
+
+  /* .dataTables_filter {
+    float: right;
+  } */
+  .table > tbody > tr > td,
+.table > thead > tr > th{
+    border: 0 !important
+  }
+  .table-hover > tbody > tr:hover {
+    background-color: #ccffff;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .table {
+      table-layout: fixed;
+      max-width: 100% !important;
+      
+    }
+  }
+  th{
+    resize: horizontal;
+  }
+  th , td , table{
+    white-space: nowrap;
+    overflow: hidden !important;
+
+  }
+  thead {
+    background: #ffffff;
+    
+  }
+  
+  .table td:nth-child(2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .highlight {
+    background: #ffff99;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    #sidebar-wrapper .list-group {
+      padding-left: 20px !important;
+    }
+    /* Force table to not be like tables anymore */
+    table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+      display: block;
+    }
+  
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr,
+  tfoot tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50% !important;
+    }
+  
+    td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      /* top: 6px; */
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+  
+    .table td:nth-child(1) {
+      background: #f5f2f2;
+      height: 100%;
+      top: 0;
+      left: 0;
+      font-weight: bold;
+    }
+  
+    /*
+    Label the data
+    */
+  
+    td:nth-of-type(1):before {
+      content: "الرقم المرجعي";
+    }
+  
+    td:nth-of-type(2):before {
+      content: "تاريخ الفاتورة";
+    }
+  
+    td:nth-of-type(3):before {
+      content: "تاريخ السداد";
+    }
+  
+    td:nth-of-type(4):before {
+      content: "المبلغ الإجمالي";
+    }
+  
+    td:nth-of-type(5):before {
+      content: "حالة الفاتورة";
+    }
+    td:nth-of-type(6):before {
+      content: " الفاتورة";
+    }
+  
+    .dataTables_length {
+      display: none;
+    }
+
+  }
+.mode{
+  padding:4px 10px;
+  line-height: 13px;
+  color:#fff;
+  font-weight: 400;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  font-size:14px;
+  letter-spacing: 0.4px;
+}
+.mode_on{
+  background-color: #09922d;
+}
+.mode_off{
+  background-color: #8b9096;
+}
+.mode_overdue{
+  background-color: #ff0000;
+}
+.mode_done{
+  background-color: #03a9f3;
+}
+/* reports */
+.invoice-tab.active{
+  color: rgb(255, 8, 0);
+  background-color:none; 
+  border-color:none;
+  border-bottom: 3px solid rgb(255, 8, 0) !important;
+  transition: all .9s ease !important;
+  }
+  @media only screen and (max-width: 767px) {
+  .header-icon{
+    width:30px;
+  }
+  #mada{
+    width:170px;
+  }
+  .navbar-brand{
+    display: none;
+  }
+  .trip-icon{
+    right: 100px;
+  }
+  
+  .trip-details{
+    text-align: center;
+  }
+}
+  
+  .invoice-tab {
+    border: none !important;
+  }
+  .nav-tabs{
+    border: none;
+  }
+
+
+/* create request steps */
+
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.step-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color:#f5f5f5;
+    transition: .4s;
+}
+.step-button[aria-expanded="true"] {
+    width: 60px;
+    height: 60px;
+    border: 2px dashed #5DC875;
+    color: #fff;
+    transform: scale(1.2);
+}
+.done {
+  background-color:#5DC875;
+  color: #fff;
+}
+.step-item {
+    z-index: 10;
+    text-align: center;
+}
+#progress {
+  -webkit-appearance:none;
+    position: absolute;
+    width: 95%;
+    z-index: 5;
+    height: 1px;
+    margin-left: 18px;
+    margin-top: 18px;
+}
+/* to customize progress bar */
+#progress::-webkit-progress-value {
+    background-color:#4aa15d;
+    transition: .5s ease;
+}
+#progress::-webkit-progress-bar {
+  background-color:#EAEAEA;
+
+}
+/* number counter input */
+ 
+.counter {
+  display: none;
+  height: 30px;
+  min-width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(201, 196, 196, 0.2);
+}
+
+.counter span {
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.counter span.num {
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.showcounter:hover .counter {
+  display: flex;
+}
+
+/* edit profile */
+ul{
+  list-style-type: none
+}
+
+#invitedList li span,
+#invitedList li input[type="text"] {
+  font: 20px/1.4 'Mulish', sans-serif;
+  margin: 0 0 5px;
+  display: block;
+}
+
+#invitedList li input[type="text"] {
+  border: 1px solid #eee;
+  width: 100%;
+  height: 50px;
+  color: #333;
+}
+
+
+/* Timeline */
+ul.timeline-3 {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline-3::after {
+  content: " ";
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  right: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline-3 > li {
+  margin: 20px 0;
+  padding-right: 20px;
+}
+ul.timeline-3 > li::after {
+  content: " ";
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #22c0e8;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+.search-bar,.date-picker {
+  display: none;
+}
+.carrier-card{
+  padding: 20px 40px;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Shipper</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white w-auto sidebar-nav"  id="sidebar-wrapper">
+
+            <!-- profile picture -->
+            <a
+            class="list-group-item list-group-item-action text-center"
+            data-bs-toggle="collapse"
+            href="#layouts">
+           
+            <div class="col-12">
+                <img src="images/defaultprofile.png" alt="hugenerd" width="90" height="90" class="rounded-circle">
+          </div>
+             
+          </a>
+          <div class="collapse" id="layouts">
+            <ul class="navbar-nav ps-3">
+              <li>
+                <a href="madfouate.html" class=" list-group-item list-group-item-action second-text px-3">
+                  <span class="me-2"> 
+                    <i class="fas fa-user-cog me-2"></i>
+                </span>
+                  <span>الملف الشخصي</span>
+                </a>
+              </li>
+              <li>
+                  <a href="#" class=" list-group-item list-group-item-action text-danger px-3">
+                    <span class="me-2"> 
+                        <i class="fas fa-power-off me-2"></i>
+                    </span>
+                    <span>تسجيل الخروج</span>
+                  </a>
+                </li>
+            </ul>
+          </div>
+    
+            <!-- <div class="p-4 text-center">
+                <img src="images/defaultprofile.png" alt="hugenerd" width="90" height="90" class="rounded-circle">
+
+            </div> -->
+            
+            <div class="list-group list-group-flush align-items-center flex-sm-column  mb-auto mx-auto text-center fw-bold ">
+                <a href="" class="list-group-item list-group-item-action second-text">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <i class="fas fa-tachometer-alt me-2"></i>
+                        </div>
+                        <div class="col-12">
+                            الرئيسية
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action second-text">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <i class="fas fa-project-diagram me-2"></i>
+                        </div>
+                        <div class="col-12">
+                            الرحلات
+                        </div>
+                    </div>
+                </a>
+              
+                    <a
+                      class="list-group-item list-group-item-action second-text px-3"
+                      data-bs-toggle="collapse"
+                      href="#layouts">
+                      <div class="col-12">
+                        <i class="fas fa-landmark fs-3 "></i>
+                     </div>
+                      <div class="col-12">
+                        المالية
+                    </div>
+                        <span class="right-icon">
+                            <i class="fas fa-caret-down"></i>
+                       </span>
+                    </a>
+                    <div class="collapse" id="layouts">
+                      <ul class="navbar-nav ps-3">
+                        <li>
+                          <a href="madfouate.html" class=" list-group-item list-group-item-action second-text px-3">
+                            <span class="me-2"
+                              > <i class="fas fa-donate me-2"></i>                           </span>
+                            <span>مدفوعاتي</span>
+                          </a>
+                        </li>
+                        <li>
+                            <a href="#" class=" list-group-item list-group-item-action second-text px-3">
+                              <span class="me-2"
+                                ><i class="fas fa-paperclip me-2"></i>                        </span>
+                              <span>فواتيري</span>
+                            </a>
+                          </li>
+                      </ul>
+                    </div>
+              
+             
+               
+            </div>
+            <div class="py-sm-4 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1 text-center">
+                <a href="#" class="list-group-item list-group-item-action second-text">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <i class="fas fa-comment-dots me-2"></i>
+                        </div>
+                        <div class="col-12">
+                            المساعدة
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <!-- main nav-->
+            <nav class="navbar navbar-expand-lg bg-white rounded-pill py-3 px-3 m-5 header-nav">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" style="color: rgb(161, 161, 161);" id="menu-toggle"></i>
+                    <img rel="shortcut icon" type="image/x-icon" src="images/favicon-32x32.png" class="m-1" />
+                    <h2 class=" m-2"> الرحلات</h2>
+                </div>
+                <a class="navbar-brand ms-auto" href="#">
+                    <img src="images/logo.png" alt="logo" id="logo">
+                </a>
+            </nav>
+           
+            <div class="container-fluid">
+                <div class="row" style="margin-right: 15px;">
+                    <div class="col-lg-8 mt-5">
+                        <div class="card bg-white p-3">
+                            <div class="card-header bg-white d-inline m-1 row">
+                                <h3 class=" col-sm-10 fw-bold d-inline"> 
+                                         80001223600154
+                                </h3>
+                                <div class="col-sm-2 float-sm-end">
+                                    <button class="btn btn-outline-danger rounded-pill" id="editButton">
+                                        <i class="fas fa-pencil-alt m-1"></i>
+                                        <span id="editButtonText">تعديل</span>
+                                    </button>
+                                </div>
+                             </div>
+                            <div class="card-body bg-white">
+                                <div class="container mb-5">
+                                    <div class="row ">
+                                        <div class="col-lg-2 col-sm-12">   
+                                            <div style=" width: 70px; height: 70px; position: absolute" class="trip-icon">
+                                                <div style="width: 60px; height: 60px; right: 45px; bottom: 15px; position: absolute; background: white; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); border-radius: 9999px"></div>
+                                                <img style="width: 40px; height: 40px; right: 55px; bottom: 25px; position: absolute" src="images/Map.png" />
+                                            </div>                                   
+                                            <p class="d-block fw-bold fs-4 text-center" style="margin-top: 70px;">الطلب</p>
+                                        </div>
+                                            <div class="col-lg-9 col-sm-12 trip-details">
+                                                <div><label class="text-muted"> الشاحنة:</label> <p class="d-inline fw-bold"> سطحة</p> </div>  
+                                                <div><label class="text-muted"> الشحنة:</label> <p class="d-inline fw-bold"> سيراميك</p></div>
+                                                <div><label class="text-muted"> وزن الشحنة:</label> <p class="d-inline fw-bold"> 23 طن</p></div>
+                                                <div><label class="text-muted"> التكلفة:</label> <p class="d-inline fw-bold">   1500 ريال </p></div>
+                                            </div> 
+                                    </div>
+                                    <div class="row mt-5">
+                                            <div class="col-lg-2 col-sm-12">
+                                                <div style=" width: 70px; height: 70px; position: absolute" class="trip-icon">
+                                                    <div style="width: 60px; height: 60px; right: 45px; bottom: 15px; position: absolute; background: white; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); border-radius: 9999px"></div>
+                                                    <img style="width: 40px; height: 40px; right: 55px; bottom: 25px; position: absolute" src="images/Map.png" />
+                                                </div>
+                                                  <p class="d-block fw-bold fs-4 text-center" style="margin-top: 70px;">الموقع</p>
+                                            </div>
+                                            <div class="col-lg-9 col-sm-12 trip-details">
+                                                <div><label class="text-muted"> الشاحنة:</label> <p class="d-inline fw-bold"> سطحة</p> </div>  
+                                                <div><label class="text-muted"> الشحنة:</label> <p class="d-inline fw-bold"> سيراميك</p></div>
+                                                <div><label class="text-muted"> وزن الشحنة:</label> <p class="d-inline fw-bold"> 23 طن</p></div>
+                                            </div> 
+                                    </div>
+
+                                    <div class="row mt-5">
+                                            <div class="col-lg-2 col-sm-12">
+                                                <div style=" width: 70px; height: 70px; position: absolute" class="trip-icon">
+                                                    <div style="width: 60px; height: 60px; right: 45px; bottom: 15px; position: absolute; background: white; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); border-radius: 9999px"></div>
+                                                    <img style="width: 40px; height: 40px; right: 55px; bottom: 25px; position: absolute" src="images/Map.png" />
+                                                </div>
+                                                <p class="d-block fw-bold fs-4 text-center" style="margin-top: 70px;">المستلم</p>
+                                            </div>
+                                            <div class="col-lg-9 col-sm-12 trip-details">
+                                                <div><label class="text-muted"> الشاحنة:</label> <p class="d-inline fw-bold"> سطحة</p> </div>  
+                                                <div><label class="text-muted"> الشحنة:</label> <p class="d-inline fw-bold"> سيراميك</p></div>
+                                            </div> 
+                                    </div>
+                                <hr>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-sm-12 mb-3">    
+                                            <div style="z-index: 2; width: 50px; height: 50px; position: absolute">
+                                                <div style="width: 60px; height: 60px; left: 20px; bottom: 15px; position: absolute; background: white; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); border-radius: 9999px"></div>
+                                                <img style="width: 40px; height: 40px; left: 30px; bottom: 25px; position: absolute" src="images/Map.png" />
+                                            </div>
+                                            <div class="card shadow-sm border h-100 carrier-card">
+                                                <h3 class="fw-bold fs-4 mb-3">مؤسسة النقليات</h3>
+                                                <div><label class="text-muted">الأسم:</label> <p class="d-inline"> احمد هادي</p> </div>  
+                                                <div><label class="text-muted"> رقم التواصل:</label> <p class="d-inline"> 05214789936</p></div>
+                                                <div><label class="text-muted">الهوية:</label> <p class="d-inline"> 235455651</p></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-sm-12 mb-3">
+                                            <div style="z-index: 2; width: 50px; height: 50px; position: absolute">
+                                                <div style="width: 60px; height: 60px; left: 20px; bottom: 15px; position: absolute; background: white; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); border-radius: 9999px"></div>
+                                                <img style="width: 40px; height: 40px; left: 30px; bottom: 25px; position: absolute" src="images/Map.png" />
+                                            </div>
+                                                <div class="card shadow-sm border h-100 carrier-card">
+                                                    <h3 class="fw-bold fs-4 mb-3"> السائق </h3>
+                                                    <div><label class="text-muted"> الأسم:</label> <p class="d-inline"> احمد هادي</p> </div>  
+                                                    <div><label class="text-muted"> رقم التواصل:</label> <p class="d-inline"> 05214789936</p></div>
+                                                    <div><label class="text-muted">  الهوية:</label> <p class="d-inline"> 235455651</p></div>
+                                                    <div><label class="text-muted">  رقم اللوحة:</label> <p class="d-inline"> 3265 S D F</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- statics -->
+                    <div class="col-lg-4 mt-5">
+                        <div class="card bg-white p-3">
+                            <div class="card-header bg-white d-inline m-1">
+                                <h2 class=" col-sm-11 fs-3 d-inline "> 
+                                         مسار الرحلة 
+                                </h2>
+                             </div>
+                            <div class="card-body bg-white">
+                                <div class="container my-5">
+                                    <div class="row">
+                                      <div class="col-sm-9 offset-md-3">
+                                        <ul class="timeline-3">
+                                          <li>
+                                            <a href="#!">نشأت الرحلة</a>
+                                            <a href="#!" class="float-end">21 March, 2014</a>
+                                          </li>
+                                          <li>
+                                            <a href="#!">نشأت الرحلة</a>
+                                            <a href="#!" class="float-end">21 March, 2014</a>
+                                          </li>
+                                           <li>
+                                            <a href="#!">نشأت الرحلة</a>
+                                            <a href="#!" class="float-end">21 March, 2014</a>
+                                          </li>
+                                          <li>
+                                            <a href="#!">نشأت الرحلة</a>
+                                            <a href="#!" class="float-end">21 March, 2014</a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+        if (window.innerWidth <= 768) {
+        el.classList.add("toggled"); // Add the "toggled" class for small screens
+    } else {
+        el.classList.remove("toggled"); // Remove the "toggled" class for large screens
+    }
+
+    // Add an event listener to open/close the menu when the button is clicked
+    toggleButton.onclick = function () {
+        el.classList.toggle("toggled");
+    };
+    
+    </script>
+<!-- Bootstrap 5 JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<!-- Stepper JavaScript -->
+<script>
+const stepButtons = document.querySelectorAll('.step-button');
+const progress = document.querySelector('#progress');
+
+Array.from(stepButtons).forEach((button,index) => {
+    button.addEventListener('click', () => {
+        progress.setAttribute('value', index * 100 /(stepButtons.length - 1) );//there are 3 buttons. 2 spaces.
+
+        stepButtons.forEach((item, secindex)=>{
+            if(index > secindex){
+                item.classList.add('done');
+            }
+            if(index < secindex){
+                item.classList.remove('done');
+            }
+        })
+    })
+})
+</script>
+ 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+
+    </body>
+
+</html>

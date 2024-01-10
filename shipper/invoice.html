@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>فواتيري</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-white w-auto sidebar-nav"  id="sidebar-wrapper">
+
+            <!-- profile picture -->
+            <div class="p-4 text-center">
+                <img src="images/defaultprofile.png" alt="hugenerd" width="90" height="90" class="rounded-circle">
+            </div>
+            <div class="list-group list-group-flush align-items-center flex-sm-column  mb-auto mx-auto text-center fw-bold ">
+                <a href="" class="list-group-item list-group-item-action second-text">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <i class="fas fa-tachometer-alt me-2"></i>
+                        </div>
+                        <div class="col-12">
+                            الرئيسية
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action second-text">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <i class="fas fa-project-diagram me-2"></i>
+                        </div>
+                        <div class="col-12">
+                            الرحلات
+                        </div>
+                    </div>
+                </a>
+                    <a
+                      class="list-group-item list-group-item-action second-text px-3"
+                      data-bs-toggle="collapse"
+                      href="#layouts">
+                      <div class="col-12">
+                        <i class="fas fa-landmark fs-3 "></i>
+                     </div>
+                      <div class="col-12">
+                        المالية
+                    </div>
+                        <span class="right-icon">
+                            <i class="fas fa-caret-down"></i>
+                       </span>
+                    </a>
+                    <div class="collapse" id="layouts">
+                      <ul class="navbar-nav ps-3">
+                        <li>
+                          <a href="madfouate.html" class=" list-group-item list-group-item-action second-text px-3">
+                            <span class="me-2"
+                              > <i class="fas fa-donate me-2"></i>                           </span>
+                            <span>مدفوعاتي</span>
+                          </a>
+                        </li>
+                        <li>
+                            <a href="#" class=" list-group-item list-group-item-action second-text px-3">
+                              <span class="me-2"
+                                ><i class="fas fa-paperclip me-2"></i>                        </span>
+                              <span>فواتيري</span>
+                            </a>
+                          </li>
+                      </ul>
+                    </div>
+            </div>
+            <div class="py-sm-4 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1 text-center">
+                <a href="#" class="list-group-item list-group-item-action second-text">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <i class="fas fa-comment-dots me-2"></i>
+                        </div>
+                        <div class="col-12">
+                            المساعدة
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action text-danger fw-bold">
+                    <div class="row align-items-center">
+                        <div class="col-12">
+                            <i class="fas fa-power-off me-2"></i>
+                        </div>
+                        <div class="col-12">
+                            تسجيل خروج
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <!-- main nav-->
+            <nav class="navbar navbar-expand-lg bg-white rounded-pill py-3 px-3 m-5 header-nav">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" style="color: rgb(161, 161, 161);" id="menu-toggle"></i>
+                    <img rel="shortcut icon" type="image/x-icon" src="images/favicon-32x32.png" class="m-1" />
+                    <h2 class=" m-2">التقارير</h2>
+                </div>
+                <a class="navbar-brand ms-auto" href="#">
+                    <img src="images/logo.png" alt="logo" id="logo">
+                </a>
+            </nav>
+            <div class="container-fluid px-4">
+       <!-- First content -->
+       <div class="row flex-wrap">
+        <div class="col-lg-9 col-sm-12 flex-wrap">
+            <div class="card col-lg-8 col-sm-12 mx-auto rounded-pill shadow ">
+                <ul class="g-2 justify-content-around nav nav-tabs " role="tablist">
+                    <!-- first tab -->
+                    <li class="col-auto nav-item ">
+                        <a class="nav-link active  d-flex invoice-tab text-dark" data-bs-toggle="tab" href="#invoice">
+                            <svg class="m-1" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect y="0.5" width="24" height="24" fill="url(#pattern0)"/>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_151_2177" transform="scale(0.0078125)"/>
+                                </pattern>
+                                <image id="image0_151_2177" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                                </defs>
+                                </svg>
+                                                             
+                             الفواتير  </a>
+                        </li>
+                    <!-- Second Tab -->
+                    <li class="col-auto nav-item" >
+                        <a class="nav-link d-flex invoice-tab text-dark" data-bs-toggle="tab" href="#ledger">
+                            
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect y="0.5" width="24" height="24" fill="url(#pattern0)"/>
+                                <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_151_2180" transform="scale(0.0078125)"/>
+                                </pattern>
+                                <image id="image0_151_2180" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                                </defs>
+                                </svg>
+                                
+                             كشف الحساب  </a>
+                    </li>
+            </ul>
+            </div>
+          <div class="card justify-content-between">
+                  
+                  <div class="card_body p-2 ">
+                     <!-- datepicker -->
+                     <div class="row mt-5">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="input-group col-6 m-2">
+                                <input class="form-control" type="text" name="daterange" placeholder="اختر الفترة الزمنية" />
+                                <span class="input-group-text">
+                                    <i class="far fa-calendar-alt"></i>
+                                 </span>
+                            </div>
+                        </div>
+                        <!-- buttons -->
+                        <div class="col-lg-6 ">
+                            <div class="d-grid gap-2 d-md-block float-sm-end">
+                                <button class="btn btn-outline-success rounded-pill" type="button"> <i class="far fa-file-excel m-2"></i>تحميل اكسل  </button>  
+                            </div>
+                        </div>
+                       
+                    </div> 
+                                                                                                    
+                                                            
+                <div class="tab-content">
+                      <div class="tab-pane fade show active" id="invoice">
+                          <!-- Tabs navs -->
+                          <div class="row ">
+                          <ul class="g-5 my-2 justify-content-around nav nav-tabs " role="tablist">
+                                  <!-- first tab -->
+                                  <li class="col-auto nav-item">
+                                      <a class="nav-link active d-flex invoice-tab text-dark" data-bs-toggle="tab" href="#home">الكل </a>
+                                      </li>
+                                  <!-- Second Tab -->
+                                  <li class="col-auto nav-item" >
+                                      <a class="nav-link d-flex invoice-tab text-dark" data-bs-toggle="tab" href="#menu1">مستحقة  </a>
+                                  </li>
+                                  <!-- Third Tab -->
+                                  <li class="col-auto nav-item">
+                                      <a class="nav-link d-flex invoice-tab text-dark" data-bs-toggle="tab" href="#menu4">مدفوعة  </a>
+                                  </li>
+                                  
+                              </ul>
+                          </div>    
+                              
+                  <!-- Tabs content -->                    
+                  <div class="tab-content shadow-sm">
+                      <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="ex-with-icons-tab-1">
+                          <div class="overflow-x p-2">
+                              <table style="width:100%;" id="example" class="table cust-datatable dataTable no-footer ">
+                                  <thead class="text-center shadow-sm border">
+                                      <tr>
+                                          <th class="text-muted"><i class="fas fa-sort "></i>الرقم المرجعي</th>
+                                          <th class="text-muted"><i class="fas fa-sort "></i> تاريخ الفاتورة</th>
+                                          <th class="text-muted"><i class="fas fa-sort "></i> تاريخ الدفع</th>
+                                          <th class="text-muted"><i class="fas fa-sort "></i>  المبلغ </th>
+                                          <th class="text-muted"><i class="fas fa-sort "></i> الحالة</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody class="text-center ">
+                                      <tr>
+                                          <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""> <i class=" m-1 far fa-file"></i> INV/2023/0087 </a></td>
+                                          <td>13/8/2023</td>
+                                          <td>30/8/2023</td>
+                                          <td>32650</td>
+                                          <td><span class="mode mode_overdue">متأخرة</span></td>    
+                                      </tr>
+                                      <tr>
+                                          <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0086</a></td>
+                                          <td>13/8/2023</td>
+                                          <td>30/8/2023</td>
+                                          <td>8650</td>
+                                          <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                      </tr> 
+                                      <tr>
+                                          <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0085</a></td>
+                                          <td>10/7/2023</td>
+                                          <td>10/8/2023</td>
+                                          <td>32650</td>
+                                          <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                      </tr>
+                                      <tr>
+                                          <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""> <i class=" m-1 far fa-file"></i> INV/2023/0084</a></td>
+                                          <td>17/7/2023</td>
+                                          <td>23/8/2023</td>
+                                          <td>9850</td>
+                                          <td><span class="mode mode_on"> مدفوعة </span></td>
+
+                                      </tr>
+                                      <tr>
+                                          <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0083</a></td>
+                                          <td>3/7/2023</td>
+                                          <td>3/8/2023</td>
+                                          <td>7750</td>
+                                          <td><span class="mode mode_on"> مدفوعة </span></td>
+
+                                      </tr>
+                                      <tr>
+                                          <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0082</a></td>
+                                          <td>26/6/2023</td>
+                                          <td>10/7/2023</td>
+                                          <td>3250</td>
+                                          <td><span class="mode mode_off">غير مدفوعة </span></td>
+                                      </tr>
+
+                                      <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0086</a></td>
+                                        <td>13/8/2023</td>
+                                        <td>30/8/2023</td>
+                                        <td>8650</td>
+                                        <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                    </tr> 
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0085</a></td>
+                                        <td>10/7/2023</td>
+                                        <td>10/8/2023</td>
+                                        <td>32650</td>
+                                        <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""> <i class=" m-1 far fa-file"></i> INV/2023/0084</a></td>
+                                        <td>17/7/2023</td>
+                                        <td>23/8/2023</td>
+                                        <td>9850</td>
+                                        <td><span class="mode mode_on"> مدفوعة </span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0086</a></td>
+                                        <td>13/8/2023</td>
+                                        <td>30/8/2023</td>
+                                        <td>8650</td>
+                                        <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                    </tr> 
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0085</a></td>
+                                        <td>10/7/2023</td>
+                                        <td>10/8/2023</td>
+                                        <td>32650</td>
+                                        <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""> <i class=" m-1 far fa-file"></i> INV/2023/0084</a></td>
+                                        <td>17/7/2023</td>
+                                        <td>23/8/2023</td>
+                                        <td>9850</td>
+                                        <td><span class="mode mode_on"> مدفوعة </span></td>
+
+                                    </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                      
+                      <!-- second tab content -->
+                      <div class="tab-pane fade" id="menu1" role="tabpanel" aria-labelledby="ex-with-icons-tab-2">
+                        <div class="overflow-x p-2">
+                            <table style="width:100%;" id="example" class="table cust-datatable dataTable no-footer ">
+                                <thead class="text-center shadow-sm border">
+                                    <tr>
+                                        <th>الرقم المرجعي</th>
+                                        <th > تاريخ الفاتورة</th>
+                                        <th > تاريخ الدفع</th>
+                                        <th >  المبلغ</th>
+                                        <th > الحالة</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center ">
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""> <i class=" m-1 far fa-file"></i> INV/2023/0087 </a></td>
+                                        <td>13/8/2023</td>
+                                        <td>30/8/2023</td>
+                                        <td>32650</td>
+                                        <td><span class="mode mode_overdue">متأخرة</span></td>    
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0086</a></td>
+                                        <td>13/8/2023</td>
+                                        <td>30/8/2023</td>
+                                        <td>8650</td>
+                                        <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                    </tr> 
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0085</a></td>
+                                        <td>10/7/2023</td>
+                                        <td>10/8/2023</td>
+                                        <td>32650</td>
+                                        <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0082</a></td>
+                                        <td>26/6/2023</td>
+                                        <td>10/7/2023</td>
+                                        <td>3250</td>
+                                        <td><span class="mode mode_off">غير مدفوعة </span></td>
+                                    </tr>
+
+                                    <tr>
+                                      <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0086</a></td>
+                                      <td>13/8/2023</td>
+                                      <td>30/8/2023</td>
+                                      <td>8650</td>
+                                      <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                  </tr> 
+                                  <tr>
+                                      <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0085</a></td>
+                                      <td>10/7/2023</td>
+                                      <td>10/8/2023</td>
+                                      <td>32650</td>
+                                      <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                  </tr>
+                                 
+                                  <tr>
+                                      <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0086</a></td>
+                                      <td>13/8/2023</td>
+                                      <td>30/8/2023</td>
+                                      <td>8650</td>
+                                      <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                  </tr> 
+                                  <tr>
+                                      <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0085</a></td>
+                                      <td>10/7/2023</td>
+                                      <td>10/8/2023</td>
+                                      <td>32650</td>
+                                      <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+
+                                  </tr>
+                                 
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+
+                      <!-- Third tab content -->
+                      <div class="tab-pane fade" id="menu4" role="tabpanel" aria-labelledby="ex-with-icons-tab-4">
+                        <div class="overflow-x p-2">
+                            <table style="width:100%;" id="example" class="table cust-datatable dataTable no-footer ">
+                                <thead class="text-center shadow-sm border">
+                                    <tr>
+                                        <th>الرقم المرجعي</th>
+                                        <th > تاريخ الفاتورة</th>
+                                        <th > تاريخ الدفع</th>
+                                        <th >  المبلغ</th>
+                                        <th > الحالة</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center ">
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""> <i class=" m-1 far fa-file"></i> INV/2023/0084</a></td>
+                                        <td>17/7/2023</td>
+                                        <td>23/8/2023</td>
+                                        <td>9850</td>
+                                        <td><span class="mode mode_on"> مدفوعة </span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0083</a></td>
+                                        <td>3/7/2023</td>
+                                        <td>3/8/2023</td>
+                                        <td>7750</td>
+                                        <td><span class="mode mode_on"> مدفوعة </span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""> <i class=" m-1 far fa-file"></i> INV/2023/0084</a></td>
+                                        <td>17/7/2023</td>
+                                        <td>23/8/2023</td>
+                                        <td>9850</td>
+                                        <td><span class="mode mode_on"> مدفوعة </span></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="text-primary" data-bs-toggle="modal" data-bs-target=""><i class=" m-1 far fa-file"></i> INV/2023/0083</a></td>
+                                        <td>3/7/2023</td>
+                                        <td>3/8/2023</td>
+                                        <td>7750</td>
+                                        <td><span class="mode mode_on"> مدفوعة </span></td>
+
+                                    </tr>
+                                 
+                                 
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    
+                  </div>
+                  </div>
+                      <!-- ledger tab content -->
+                      <div class="tab-pane fade" id="ledger" >
+                        <div class="overflow-x p-2">
+                            <table style="width:100%;" id="example" class="table no-footer">  
+                                <thead class="text-center shadow-sm border">
+                                <tr>
+                                    <th style="width: 80px;"class="text-muted">العملية</th>
+                                    <th class="text-muted"><i class="fas fa-sort "></i> التاريخ </th>
+                                    <th class="text-muted"><i class="fas fa-sort "></i> البيان </th>
+                                    <th class="text-success text-muted"><i class="fas fa-sort "></i> مدين</th>
+                                    <th class="text-danger text-muted"><i class="fas fa-sort "></i> دائن</th>
+                                    <th class="text-muted"><i class="fas fa-sort "></i> رصيد</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center ">
+                                <tr>
+                                    <td>1</td>
+                                    <td>13/8/2023</td>
+                                    <td>INV/2023/00061</td>
+                                    <td class="text-success">ريال 191452</td>
+                                    <td class="text-danger">-</td>  
+                                    <td> 191475</td>  
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>13/8/2023</td>
+                                    <td>فاتورة</td>
+                                    <td class="text-success">  191452 ريال</td>
+                                    <td class="text-danger">-</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>13/8/2023</td>
+                                    <td>INV/2023/00061</td>
+                                    <td class="text-success">  191452 ريال</td>
+                                    <td class="text-danger">-</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>13/8/2023</td>
+                                    <td>INV/2023/0056</td>
+                                    <td class="text-success">  191452 ريال</td>
+                                    <td class="text-danger">-</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>13/8/2023</td>
+                                    <td>فاتورة</td>
+                                    <td class="text-success">  191452 ريال</td>
+                                    <td class="text-danger">-</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>13/8/2023</td>
+                                    <td>INV/2023/00061</td>
+                                    <td class="text-success">  191452 ريال</td>
+                                    <td class="text-danger">-</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>13/8/2023</td>
+                                    <td>فاتورة بباقي نقلات شهر 03/2023</td>
+                                    <td class="text-success">191452 ريال</td>
+                                    <td class="text-danger">2356 ريال</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>13/8/2023</td>
+                                    <td> تسديد غرامات</td>
+                                    <td class="text-success">191452 ريال</td>
+                                    <td class="text-danger">2356 ريال</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>13/8/2023</td>
+                                    <td> تسديد غرامات</td>
+                                    <td class="text-success">-</td>
+                                    <td class="text-danger">2356 ريال</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>13/8/2023</td>
+                                    <td>فاتورة بباقي نقلات شهر 03/2023</td>
+                                    <td class="text-success">191452 ريال</td>
+                                    <td class="text-danger">-</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>13/8/2023</td>
+                                    <td> تسديد غرامات</td>
+                                    <td class="text-success">- </td>
+                                    <td class="text-danger">2356 ريال</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>13/8/2023</td>
+                                    <td> تسديد غرامات</td>
+                                    <td class="text-success">191452 ريال</td>
+                                    <td class="text-danger">2356 ريال</td>  
+                                    <td> 191475 ريال</td>  
+                                </tr>
+                            
+                            </tbody>
+                        </table>
+                        </div>
+                        </div>
+                  </div>
+                     
+             </div>
+                  <!-- Tabs content  -->
+          </div> 
+      </div>
+          <!-- partner Ledger -->
+          
+          <div class="col-sm-3 mt-5">
+                <div class="col-sm-3 mx-5">
+                    <div style="width: 225px; height: 230px; position: relative">
+                        <div style="width: 220px; height: 230px; left: 0px; top: 0px; position: absolute; background: #8ED99E; border-radius: 9999px"></div>
+                        <div style="width: 220px; height: 220px; left: 5px; top: 4px; position: absolute; background: white; border-radius: 9999px"></div>
+                        <div style="width: 225px; height: 230px; padding: 10px; left: 0px; top: 0px; position: absolute; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                        <div style="width: 109px; text-align: center"><span style="color: black; font-size: 20px; font-family: Cairo; font-weight: 400; word-wrap: break-word">تم سداد<br/></span><span style="color: black; font-size: 35px; font-family: Cairo; font-weight: 700; word-wrap: break-word">85%<br/></span><span style="color: black; font-size: 20px; font-family: Cairo; font-weight: 400; word-wrap: break-word">من فواتيرك</span></div>
+                        </div>
+                    </div>
+                    </div>
+                <div class="col-sm-3 mx-5">
+                    <div style="width: 225px; height: 330px; position: relative; margin-top: 130px" >
+                        <div style="width: 220px; height: 230px; left: 0px; top: 0px; position: absolute; background: #8ED99E; border-radius: 9999px"></div>
+                        <div style="width: 220px; height: 220px; left: 5px; top: 4px; position: absolute; background: white; border-radius: 9999px"></div>
+                        <div style="width: 225px; height: 230px; padding: 10px; left: 0px; top: 0px; position: absolute; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                        <div style="width: 109px; text-align: center"><span style="color: black; font-size: 20px; font-family: Cairo; font-weight: 400; word-wrap: break-word">تم استهلاك<br/></span><span style="color: black; font-size: 35px; font-family: Cairo; font-weight: 700; word-wrap: break-word">30%<br/></span><span style="color: black; font-size: 20px; font-family: Cairo; font-weight: 400; word-wrap: break-word">من الحد الائتماني</span></div>
+                        </div>
+                    </div>
+                </div>
+          </div>
+
+      </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+        if (window.innerWidth <= 768) {
+        el.classList.add("toggled"); // Add the "toggled" class for small screens
+    } else {
+        el.classList.remove("toggled"); // Remove the "toggled" class for large screens
+    }
+
+    // Add an event listener to open/close the menu when the button is clicked
+    toggleButton.onclick = function () {
+        el.classList.toggle("toggled");
+    };
+    
+    </script>
+
+
+<!-- <script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script> -->
+<!-- jquery version -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+<!-- jQuery Data Table -->
+<!-- <script src='https://code.jquery.com/jquery-3.7.0.js'></script> -->
+
+<!-- Data Table JS -->
+<script src='https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js'></script>
+<script src='https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js'></script>
+<script src='https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js'></script>
+<!-- End of Data Table JS -->
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+<!-- <script src="https://cdn.datatables.net/1.10.14/js/jquery.dataTables.min.js"></script> -->
+
+<!-- datepicker -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<script>
+    $(function() {
+      $('input[name="daterange"]').daterangepicker({
+        opens: 'left'
+      }, function(start, end, label) {
+        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+      });
+    });
+    </script>
+<!-- End of datepicker -->
+
+<script>
+    // JavaScript code to change card content
+    document.getElementById('changeContentBtn').addEventListener('click', function() {
+      // Create a new HTML structure as a string
+      var newContent = 
+                    '<div class="card justify-content-around">'+
+                        '<div class="card-header bg-white">'+
+                          '<div class="row m-2">'+
+                                '<p class="text-center text-muted">  اخر عملية شحن رصيد في تاريخ </t><b>20/12/2023 18:30</b> </p>' +
+                                 ' </div>' +
+                                   '</div>' +  
+                                                   ' <div class="card_body bg-white p-3">'+
+                                                    // <!-- Bank Details -->+
+                                                  '  <h3 class="fw-bold text-muted mb-5"> بيانات الحساب البنكي</h3>'+
+                                                    '<div class="container-fluid ">'+
+                                                        // <!-- First Bank Details -->
+                                                        '<div class="row mb-5 ">'+
+                                                            '<div class="col-lg-4 col-md-12 col-sm-12 mb-3">'+
+                                                                '<img src="images/Al_Rajhi.png" id="mada">'+
+                                                          '  </div>'+
+                                                            '<div class="col-lg-8 col-md-12 col-sm-12 card-text">'+
+                                                                '<p><b>اسم البنك:</b></t> مصرف الراجحي</p>'+
+                                                                '<p><b>اسم صاحب الحساب:</b></t> شركة الناقل التقني لتقنية المعلومات</p>'+
+                                                               ' <p><b> رقم الحساب:</b></t><label id="in01" type="text" aria-describedby="btn01" value="5980000003922332289" readonly> 5980000003922332289 <button id="btn01" data-clipboard-demo=""data-clipboard-target="#in01" data-bs-toggle="tooltip" data-bs-placement="bottom" title="نسخ"><i class="far fa-copy"></i></button></label> </p>'+
+                                                                '<p> <b>رقم الآيبان:</b> </t><label id="in01" type="text" aria-describedby="btn01" value="SA00989382700022388" readonly> SA00989382700022388 <button id="btn01"  data-clipboard-demo="" data-clipboard-target="#in01" data-bs-toggle="tooltip" data-bs-placement="bottom" title="نسخ"><i class="far fa-copy"></i></button></label></p>'+
+                                                            '</div>'+
+                                                       ' </div>'+
+                                                        // <!-- Second Bank Details -->
+                                                        '<div class="row mb-5 ">'+
+                                                            '<div class="col-lg-4 col-md-12 col-sm-12 mb-3">'+
+                                                                '<img src="images/RIYADBANK.png" id="mada">'+
+                                                          '  </div>'+
+                                                          '<div class="col-lg-8 col-md-12 col-sm-12 card-text">'+
+                                                                '<p><b>اسم البنك:</b></t> مصرف الرياض</p>'+
+                                                                '<p><b>اسم صاحب الحساب:</b></t> شركة الناقل التقني لتقنية المعلومات</p>'+
+                                                               ' <p><b> رقم الحساب:</b></t><label id="in01" type="text" aria-describedby="btn01" value="5980000003922332289" readonly> 5980000003922332289 <button id="btn01" data-clipboard-demo=""data-clipboard-target="#in01" data-bs-toggle="tooltip" data-bs-placement="bottom" title="نسخ"><i class="far fa-copy"></i></button></label> </p>'+
+                                                                '<p> <b>رقم الآيبان:</b> </t><label id="in01" type="text" aria-describedby="btn01" value="SA00989382700022388" readonly> SA00989382700022388 <button id="btn01"  data-clipboard-demo="" data-clipboard-target="#in01" data-bs-toggle="tooltip" data-bs-placement="bottom" title="نسخ"><i class="far fa-copy"></i></button></label></p>'+
+                                                            '</div>'+
+                                                       ' </div>'+
+                                                    //   <!-- attach file -->
+                                                     ' <div class="mt-3">'+
+                                                     '   <h3 class="fw-bold text-muted mt-3" for="formFile"> أرفق الإيصال</h3>'+
+                                                       ' <input class="form-control" type="file" id="formFile" placeholder="أرفق الإيصال">'+
+                                                    '  </div>'+
+                                                    //   <!-- submit button -->
+                                                    '  <div class="text-center">'+
+                                                      '  <button class=" btn btn-lg btn-outline-primary m-3 rounded-pill" type="submit"> شحن الرصيد  </button>'  +
+                                                    '</div>'+
+                                       ' </div>'+
+                            ' </div>'
+                    ;
+                      
+      
+      // Change the content of the card
+      document.getElementById('cardContent').innerHTML = newContent;
+    });
+  </script>
+
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable({
+      //disable searching and lenghth columns on data table
+    searching: false,
+    lengthChange: false,
+
+      language: {
+        //customize pagination prev and next buttons: use arrows instead of words
+        'paginate': {
+          'previous': '<span class="fa fa-chevron-right"></span>',
+          'next': '<span class="fa fa-chevron-left"></span>'
+        }
+
+      }
+    })  
+} );
+</script>
+    </body>
+
+</html>

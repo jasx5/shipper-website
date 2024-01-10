@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Shipper</title>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase">
+                <a class="navbar-brand" href="Home_En.html">
+                    <img src="images/logo.png" alt="logo" id="logo">
+                </a>
+            </div>
+        
+            <div class="list-group list-group-flush my-3">
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-tachometer-alt me-2"></i>الرئيسية</a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-project-diagram me-2"></i>الرحلات</a>
+                <div class="dropdown">
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent second-text dropdown-toggle fw-bold"
+                        id="paymentsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="true">
+                        <i class="fas fa-chart-line me-2"></i>المالية
+                    </a>
+                    <div class="dropdown-menu list-group-item list-group-item-action bg-transparent second-text fw-bold" aria-labelledby="paymentsDropdown">
+                        <a class="dropdown-item list-group-item list-group-item-action bg-transparent second-text fw-bold" href="#"><i class="fas fa-donate me-2"></i>مدفوعاتي</a>
+                        <a class="dropdown-item list-group-item list-group-item-action bg-transparent second-text fw-bold" href="invoices.html"><i class="fas fa-paperclip me-2"></i>التقارير</a>
+                        <!-- Add more sub-items here as needed -->
+                    </div>
+                </div>
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold "><i
+                        class="fas fa-paperclip me-2"></i>التقارير</a> -->
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-comment-dots me-2"></i>المساعدة</a>
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                        class="fas fa-map-marker-alt me-2"></i>Outlet</a> -->
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
+                        class="fas fa-power-off me-2"></i> تسجيل خروج</a>
+            </div>
+        </div>
+        
+        
+        
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <h2 class="fs-3 m-0">المدفوعات</h2>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav sticky ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user me-2"></i>Alsayadlani Company
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">الملف الشخصي</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        
+            <div class="container-fluid px-4">
+                <!-- Tabs Section -->
+                <ul class="row g-3 my-2 justify-content-around nav nav-tabs" role="tablist">
+                    <!-- first tab -->
+                    <li class="col-md-3 nav-item">
+                        <a class="nav-link active bg-white shadow-sm d-flex justify-content-around align-items-center rounded border border-success btn border-3 border-bottom-0 border-top-0 border-start-0 " 
+                        data-bs-toggle="tab" href="#home">
+                                <div class="card-body">
+                                  <div class="d-flex justify-content-between p-md-1">
+                                <!-- Text -->
+                                    <div class="align-self-center">
+                                      <h2 class="fs-2" style="color: slategrey;" >18,000</h2>
+                                      <p class="m-3" style="color: slategrey;"> رصيد محفظتك </p>
+                                    </div>
+                                    <!-- icon -->
+                                    <div class="d-flex flex-row">
+                                        <div class="align-self-center">
+                                          <button type="button" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                              <i class="fas fa-plus fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                                          </button>
+                                      </div>
+                                      </div>
+                                  </div>
+                                </div>
+                            </a>
+                        </li>
+
+                     <!-- Second Tab -->
+                    <li class="col-md-3 nav-item" >
+                        <a class="nav-link nav-card bg-white shadow-sm d-flex justify-content-around align-items-center rounded border border-success btn border-3 border-bottom-0 border-top-0 border-start-0" 
+                        data-bs-toggle="tab" href="#menu1">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between p-md-1">
+                          <!-- Text -->
+                              <div class="align-self-center">
+                                <h2 class="fs-2" style="color: slategrey;">432200</h2>
+                                <p class="m-3 " style="color: slategrey;"> المبالغ غير المفوترة</p>
+                              </div>
+                              <!-- icon -->
+                              <div class="d-flex flex-row">
+                                  <div class="align-self-center">
+                                    <i class="fas fa-hand-holding-usd fs-1 primary-text border rounded-full secondary-bg p-3" ></i>
+
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                        </a>
+                    </li>
+
+                    <!-- Third Tab -->
+                    <li class="col-md-3 nav-item">
+                        <a class="nav-link nav-card bg-white shadow-sm d-flex justify-content-around align-items-center rounded border border-success btn border-3 border-bottom-0 border-top-0 border-start-0 " 
+                        data-bs-toggle="tab" href="#menu2">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between p-md-1">
+                          <!-- Text -->
+                              <div class="align-self-center">
+                                <h2 class="fs-2" style="color: slategrey;" >3200</h2>
+                                <p class="m-3" style="color: slategrey;"> المتأخر عن سداده </p>
+                              </div>
+                              <!-- icon -->
+                              <div class="d-flex flex-row">
+                                  <div class="align-self-center">
+                                    <i class="fas fa-user-clock fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                        </a>
+                    </li>
+
+                    
+                </ul>
+       <!-- First content -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <div class="row my-5">
+                        <!-- wallet history -->
+                      <div class="col-md-8 col-sm-12 "> 
+                            <div class="row">
+                                <div class="payment-card col-md-10 col-sm-12 mb-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                    <div class="row m-2">
+                                        <h2 class="col-sm-7"> عمليات المحفظة</h2>
+                                        <div class="col-sm-4 ms-auto d-flex">
+                                            <button class="btn btn-success m-1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">  <i class="fas fa-plus m-2"></i>إضافة رصيد </button>  
+                                            <button class="btn btn-outline-success m-1" type="button"> <i class="far fa-file-excel m-2"></i>تحميل اكسل  </button>  
+                                        </div>
+                                       
+                                    </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table w-auto table-striped data-table payment_table">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-sm-8">العملية</th>
+                                                <th class="col-sm-4"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <tr>
+                                                    <td class="col-sm-8">إيداع عن طريق سريع</td>
+                                                    <td class="text-success text-center">+100 ريال <br> 20.08.2023 | 15:03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>تحويل من حساب</td>
+                                                    <td class="text-success text-center">+4300 ريال <br> 20.08.2023 | 15:03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سداد مستحقات</td>
+                                                    <td class="text-danger text-center">-100 ريال <br> 18.08.2023 | 09:03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>إيداع عن طريق سريع</td>
+                                                    <td class="text-success text-center">+90000 ريال <br> 20.08.2023 | 15:03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سداد غرامات</td>
+                                                    <td class="text-success text-center">+100 ريال <br> 11.08.2023 | 15:03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سداد غرامات</td>
+                                                    <td class="text-danger text-center">-6500 ريال <br> 11.08.2023 | 09:03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سداد غرامات</td>
+                                                    <td class="text-danger text-center">-100 ريال <br> 10.08.2023 | 09:03</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>سداد غرامات</td>
+                                                    <td class="text-danger text-center">-4300 ريال <br> 10.08.2023 | 09:03</td>
+                                                </tr>
+
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                </div>
+                            </div> 
+
+                          <div class="row d-flex">
+                            <!-- Add credit Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                             <div class="modal-dialog modal-lg">
+                             <div class="modal-content">
+                                 <div class="modal-header p-5 bg-dark">
+                                 <h4 class="modal-title text-white" id="exampleModalLabel">إضافة رصيد للمحفظة</h4>
+                                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                 </div>
+                                 <div class="modal-body">
+ 
+                                     <div class="col-sm-12 text-center">
+                                       <img src="images/process1.png" alt="process flow" style="width: 500px; height: 100px;">
+                                     </div>
+                                         <!-- <h5 class="text-center"> المبلغ المراد إضافته</h5> -->
+                                         <input type="text" class="form-control text-center" placeholder="أدخل هنا المبلغ المراد إضافته للمحفظة" style="height: 80px;">        
+                                     </div>
+                                     <div class="modal-footer">
+                                         <button type="button" class="btn btn-dark" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#PayMethods">التالي</button>
+                                         </div>
+                                 </div>
+                                 
+                             </div>
+                             </div>
+                        
+                                 <!-- Add credit Modal -->
+                             <div class="modal fade" id="PayMethods" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog modal-lg">
+                                 <div class="modal-content">
+                                     <div class="modal-header p-5 bg-dark">
+                                     <h4 class="modal-title text-white" id="exampleModalLabel">إضافة رصيد للمحفظة</h4>
+                                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                     </div>
+                                     <div class="modal-body">
+                                         <p class="p-2" id="description" style="color: slategrey;">باستطاعتك شحن رصيدك باستخدام الطرق الموضحة أدناه </p>
+                                         <div class="col-sm-12 text-center">
+                                           <img src="images/process2.png" alt="process flow" style="width: 500px; height: 100px;" class="m-2 col-sm-12 ">
+                                         </div>
+ 
+                                     <!-- first option -->
+                                             <div>
+                                                 <button class=" w-100 border m-2 p-3 justify-content-around rounded border-2 btn btn-outline-dark fw-bold fs-5 " data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"> 
+                                                     تحويل بنكي
+                                                 </button>
+                                             </div>
+                                         
+                                     <!-- second option -->
+                                     <div>
+                                         <button class="w-100 border m-2 p-3 rounded border-2 btn btn-outline-dark" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"> 
+                                             <i class="fab fa-apple-pay fs-1"> </i>   
+                                         </button>
+                                     </div>
+ 
+                                     <!-- Third option -->
+                                     <div>
+                                         <button class="w-100 border m-2 p-3 rounded border-2 btn btn-outline-dark" data-bs-target="#exampleModal3" data-bs-toggle="modal" data-bs-dismiss="modal"> 
+                                             <img src="images/VISA.png" id="mada">
+                                             <img src="images/mada.png" id="mada">
+                                             <img src="images/stc_pay.png" id="mada">
+                                         </button>
+                                     </div>
+ 
+                                     </div>
+                                     
+                                 </div>
+                                 </div>
+                             </div>
+ 
+                             <!-- Popup Bank Transfer -->
+                             <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1"  id="myModal">
+                                 <div class="modal-dialog modal-lg">
+                                 <div class="modal-content">
+                                     <div class="modal-header p-5 bg-dark">
+                                     <h5 class="modal-title text-white" id="exampleModalToggleLabel2">إضافة الرصيد عن طريق التحويل البنكي</h5>
+                                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                     </div>
+                                     <div class="modal-body w-auto table-width align-items-center">
+                                         
+                                           <p class="p-2" id="description" style="color: slategrey;">باستطاعتك شحن رصيدك باستخدام التحويل البنكي على أحد حساباتنا البنكية الموضحة أدناه و ارفاق الايصال بعد التحويل ليتم شحن الحساب</p>
+                                           <div class="col-sm-12 text-center">
+                                             <img src="images/process3.png" alt="process flow" style="width: 500px; height: 100px;">
+                                           </div>
+                                           <h3 class="fw-bold text-secondry"> بيانات الحساب البنكي</h3>
+                                           <table>
+                                                 <thead>
+                                                     <tr>
+                                                         <th scope="col"></th>
+                                                         <th scope="col"></th>
+                                                     </tr>
+                                                 </thead>
+                                                 <tbody class="m-3">
+                                                     <!-- First Bank Deatils -->
+                                                     <tr>
+                                                         <th scope="row-auto"><div></div></th>
+                                                         <td>
+                                                             <img src="images/Al_Rajhi.png" id="mada">
+                                                         </td>
+                                                         <td class="p-3" style="color: slategrey;">
+                                                             اسم البنك</t> مصرف الراجحي
+                                                         </br>
+                                                     اسم صاحب الحساب</t> شركة الناقل التقني لتقنية المعلومات
+                                                     </br>
+                                                     رقم الحساب</t> <label id="in01"
+                                                     type="text"
+                                                     aria-describedby="btn01"
+                                                     value="5980000003922332289"
+                                                     readonly> 5980000003922332289     <button id="btn01"
+                                                     data-clipboard-demo=""
+                                                     data-clipboard-target="#in01"
+                                                     data-bs-toggle="tooltip"
+                                                     data-bs-placement="bottom"
+                                                     title="نسخ"><i class="far fa-copy"></i></button></label> 
+                                                 </br>      
+                                             
+ 
+                                                 رقم الآيبان </t><label id="in01"
+                                                 type="text"
+                                                 aria-describedby="btn01"
+                                                 value="SA00989382700022388"
+                                                 readonly> SA00989382700022388     <button id="btn01"
+                                                 data-clipboard-demo=""
+                                                 data-clipboard-target="#in01"
+                                                 data-bs-toggle="tooltip"
+                                                 data-bs-placement="bottom"
+                                                 title="نسخ"><i class="far fa-copy"></i></button></label>  
+                                                     </td>
+                                                     </tr>
+ 
+                                                     <!-- second Bank Details-->
+                                                     <tr >
+                                                         <th scope="row" style="color: slategrey;"><div></div></th>
+                                                         <td>
+                                                             <img src="images/RIYADBANK.png" id="mada">
+                                                         </td>
+                                                         <td class="p-3" style="color: slategrey;">
+                                                             اسم البنك</t> مصرف الرياض
+                                                         </br>
+                                                     اسم صاحب الحساب</t> شركة الناقل التقني لتقنية المعلومات
+                                                     </br>
+                                                     رقم الحساب</t> <label id="in01"
+                                                     type="text"
+                                                     aria-describedby="btn01"
+                                                     value="5980000003922332289"
+                                                     readonly> 5980000003922332289     <button id="btn01"
+                                                     data-clipboard-demo=""
+                                                     data-clipboard-target="#in01"
+                                                     data-bs-toggle="tooltip"
+                                                     data-bs-placement="bottom"
+                                                     title="نسخ" ><i class="far fa-copy"></i></button></label> 
+                                                 </br>
+                                                 رقم الآيبان </t> <label id="in01"
+                                                 type="text"
+                                                 aria-describedby="btn01"
+                                                 value="SA00989382700022388"
+                                                 readonly> SA00989382700022388     <button id="btn01"
+                                                 data-clipboard-demo=""
+                                                 data-clipboard-target="#in01"
+                                                 data-bs-toggle="tooltip"
+                                                 data-bs-placement="bottom"
+                                                 title="نسخ"><i class="far fa-copy"></i></button></label>
+                                                     </td>
+                                                     </tr>
+                                             </table>  
+                                         
+ 
+                                         <!-- attachment -->
+                                     
+                                                     <h3 class="pt-5 fw-bold text-secondry">تحميل ايصال التحويل</h3>
+                                         
+                                                 <div class="dropzone m-3 p-3 bg-light">
+                                                     <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                                                     <input type="file" class="upload-input" />
+                                                     <label style="color: rgb(148, 142, 134);"> ارفق الايصال</label>
+                                                 </div>            
+                                     </div>
+                                     <div class="modal-footer">
+                                         <button type="button" class="btn btn-info text-white" name="uploadbutton">ارفاق الايصال</button>
+                                     <button class="btn btn-secondry" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">السابق</button>
+                                     </div>
+                                 </div>
+                                 </div>
+                             </div>
+ 
+                                <!--  credit card Modal -->
+                                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                 <div class="modal-dialog ">
+                                 <div class="modal-content">
+                                     <div class="modal-header p-5 bg-dark">
+                                     <h5 class="modal-title text-white" id="exampleModalLabel3">إضافة رصيد للمحفظة</h5>
+                                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                     </div>
+                                     <div class="modal-body justify-content-center">
+                                                         <div class="card">
+                                                             <div class="card-header">
+                                                                 <div class="row">
+                                                                     <div class="col-md-6 text-right">
+                                                                         <img src="https://img.icons8.com/color/36/000000/visa.png">
+                                                                         <img src="https://img.icons8.com/color/36/000000/mastercard.png">
+                                                                         <img src="https://img.icons8.com/color/36/000000/amex.png">
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="card-body w-auto">
+                                                                 <div class="form-group w-auto">
+                                                                     <label for="cc-number" class="control-label">رقم البطاقة الائتمانية</label>
+                                                                     <input id="cc-number" type="tel" class="form-control input-lg cc-number" autocomplete="cc-number"  placeholder="•••• •••• •••• ••••" required>
+                                                                 </div>
+                                                                 <div class="row p-3">
+                                                                     <div class="col-md-6">
+                                                                         <div class="form-group ">
+                                                                             <label for="cc-exp" class="control-label">تاريخ انتهاء البطاقة</label>
+                                                                             <input id="cc-exp" type="tel" class="form-control input-lg cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required>
+                                                                         </div>
+                                                                     </div>
+                                                                     <div class="col-md-6">
+                                                                         <div class="form-group">
+                                                                             <label for="cc-cvc" class="control-label">كود الحماية</label>
+                                                                             <input id="cc-cvc" type="tel" class="form-control input-lg cc-cvc" autocomplete="off" placeholder="••••" required>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                                 <div class="form-group p-3">
+                                                                     <label for="numeric" class="control-label">اسم حامل البطاقة</label>
+                                                                     <input type="text" class="form-control input-lg">
+                                                                 </div>
+                                                                 <div class="form-group p-3">
+                                                                     <button type="submit" class="btn btn-success  btn-lg form-control" >دفع</button>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                             
+                                    
+                                     </div>
+                                     <div class="modal-footer">
+                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                                     </div>
+                                 </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                    <!-- graph section -->
+                    <div class="col-sm-3 my-5">
+                        <div class="row p-2 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                             <h2 class="col-sm-12 pb-5 mt-3">سداد فواتيرك</h2>
+                                 <div class="col-sm-12 circular-progress" data-end-value="85" data-speed="50">
+                                     <div class="value-container">0%</div>
+                             </div>
+                             <p class="p-4 text-center" style="color: slategrey;">تم سداد 85% من فواتير الشهر الحالي</p>          
+                     </div>
+                     <div class="">
+                        <div class="row p-2 mt-5 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                             <h2 class="col-sm-12 pb-5 mt-3">حدك الائتماني </h2>
+                                 <div class="col-sm-12 circular-progress" data-end-value="30" data-speed="50">
+                                     <div class="value-container">0%</div>
+                             </div>
+                             <p class="p-4 text-center" style="color: slategrey;">تم استهلاك 30% من حدك الائتماني الشهري</p>          
+                     </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+         <!-- Tab 2 content -->
+        <div class="container-fluid tab-pane fade" id="menu1" >
+            <div class="container-fluid p-30 ">
+                <div class="row">
+                    <div class="card col-md-12 main-datatable w-100">
+                        <div class="card-header">
+                            <div class="row m-2">
+                                <h2 class="col-sm-10">سجل المستحقات</h2>
+                                <button type="button" class="btn btn-success float-sm-end mb-3 col-sm-2" data-bs-toggle="modal" data-bs-target="#payModal">سداد الجميع</button>
+                            </div>
+                            </div>
+                        <div class="card_body bg-white p-3">
+                            <div class="row d-flex">
+                                <div class="col-sm-10">
+                                    <div class="form-group searchInput">
+                                        <input type="search" class="form-control" id="filterbox" placeholder="أدخل رقم الفاتورة ">
+                                    </div>
+                                </div> 
+                            </div>
+                                        <div class="container text-center">
+                                            <img src="images/empty.png" style="width: 250px;"  />
+                                            <p style="color: slategrey;"> لا توجد بيانات</p>
+                                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+
+          <!-- Tab 3 content -->
+          <div class="container-fluid tab-pane fade " id="menu2">
+            <div class="container-fluid p-30">
+                <div class="row">
+                    <div class="card col-md-12 main-datatable w-100">
+                        <div class="card-header">
+                            <div class="row m-2">
+                                <h2 class="col-sm-10">سجل المستحقات</h2>
+                                <button type="button" class="btn btn-success float-sm-end mb-3 col-sm-2" data-bs-toggle="modal" data-bs-target="#payModal">سداد الجميع</button>
+                            </div>
+                            </div>
+                        <div class="card_body bg-white p-3">
+                            <div class="row d-flex">
+                                <div class="col-sm-10">
+                                    <div class="form-group searchInput">
+                                        <input type="search" class="form-control" id="filterbox" placeholder="أدخل رقم الفاتورة ">
+                                    </div>
+                                </div> 
+                            </div>
+                            
+                            <!-- Pay Details Modal -->
+                            <div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header p-5 bg-dark">
+                                        <h4 class="modal-title text-white" id="exampleModalLabel">تفاصيل السداد</h4>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    
+                                    <div class="modal-body">
+                                        <h5 class="p-2" id="description" style="color: slategrey;">سدد جميع فواتيرك أو مديونياتك بضغطة واحدة</h5>
+                                        <table style="width:100%;" class="table cust-datatable dataTable no-footer ">
+                                            <thead class="text-center">
+                                                <tr>
+                                        <th>الرقم المرجعي</th>
+                                        <th> المبلغ المستحق</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="text-center">
+                                                <tr>
+                                                    <td class="fw-bold fs-5">  INV/2023/0087</td>
+                                                    <td><input type="text" class="form-control text-center" id="myInput" value="1365.32" data-bs-toggle="tooltip" data-bs-placement="bottom" title="يمكنك سداد الفواتير جزئيا. أدخل المبلغ المراد تسديده"> </td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#payModal2">التالي</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div> 
+
+                            <!-- 2nd Pay details -->
+                            <div class="modal fade" id="payModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header p-5 bg-dark">
+                                    <h4 class="modal-title text-white" id="exampleModalLabel">  تفاصيل السداد</h4>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5 class="p-2" id="description" style="color: slategrey;">اختر طريقة السداد</h5>
+                                    <!-- first option -->
+                                            <div>
+                                                <button class="w-100 border m-2 p-3 rounded border-2 btn btn-outline-dark fw-bold fs-5" data-bs-target="#walletModal" data-bs-toggle="modal" data-bs-dismiss="modal"> 
+                                                    رصيد المحفظة     
+                                            </button> 
+                                            </div>
+                                        
+                                    <!-- second option -->
+                                    <div>
+                                        <button class=" w-100 border m-2 p-3 justify-content-around rounded border-2 btn btn-outline-dark fw-bold fs-5" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"> 
+                                            تحويل بنكي
+                                        </button>
+                                    </div>
+
+                                    <!-- Third option -->
+                                    <div>
+                                        <button class="w-100 border m-2 p-3 rounded border-2 btn btn-outline-dark " data-bs-target="#exampleModal3" data-bs-toggle="modal" data-bs-dismiss="modal"> 
+                                            <img src="images/VISA.png" id="mada">
+                                            <img src="images/mada.png" id="mada">
+                                            <img src="images/stc_pay.png" id="mada">
+                                        </button>
+                                    </div>
+
+                                    </div>
+                                    
+                                </div>
+                                </div>
+                            </div>
+
+                             <!-- loading Details Modal -->
+                             <div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    
+                                    <div class="modal-body text-center">
+                                        <div class="spinner-grow text-danger" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div>
+                                          <div class="spinner-grow text-danger text-center" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div>
+                                          <div class="spinner-grow text-danger text-center" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div>
+                                          <div class="spinner-grow text-danger text-center" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div>
+                                          <div class="spinner-grow text-danger text-center" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div>
+                                          <div class="spinner-grow text-danger text-center" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                          </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div> 
+
+
+                            <div class="overflow-x pt-3">
+                                <table style="width:100%;" id="filtertable" class="table cust-datatable dataTable no-footer">
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th width="50"><input type="checkbox" name="brand" value="selectAll"  onclick="toggleCheckboxes()"></th>
+                                            <th >الرقم المرجعي</th>
+                                            <th > تاريخ الفاتورة</th>
+                                            <th > تاريخ الدفع</th>
+                                            <th >  المبلغ المستحق</th>
+                                            <th > الحالة</th>
+                                            <th > سداد</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0087</td>
+                                            <td>13/8/2023</td>
+                                            <td>30/8/2023</td>
+                                            <td>32650</td>
+                                            <td><span class="mode mode_overdue">غير مدفوعة</span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0086</td>
+                                            <td>13/8/2023</td>
+                                            <td>30/8/2023</td>
+                                            <td>8650</td>
+                                            <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr> 
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0085</td>
+                                            <td>10/7/2023</td>
+                                            <td>10/8/2023</td>
+                                            <td>32650</td>
+                                            <td><span class="mode mode_done">مدفوعة جزئيا</span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0084</td>
+                                            <td>17/7/2023</td>
+                                            <td>23/8/2023</td>
+                                            <td>9850</td>
+                                            <td><span class="mode mode_overdue">غير مدفوعة </span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0083</td>
+                                            <td>3/7/2023</td>
+                                            <td>3/8/2023</td>
+                                            <td>7750</td>
+                                            <td><span class="mode mode_overdue">غير مدفوعة </span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0082</td>
+                                            <td>26/6/2023</td>
+                                            <td>10/7/2023</td>
+                                            <td>3250</td>
+                                            <td><span class="mode mode_overdue">غير مدفوعة </span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0081</td>
+                                            <td>13/6/2023</td>
+                                            <td>30/6/2023</td>
+                                            <td>2650</td>
+                                            <td><span class="mode mode_overdue">غير مدفوعة </span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0080</td>
+                                            <td>3/6/2023</td>
+                                            <td>18/6/2023</td>
+                                            <td>9650</td>
+                                            <td><span class="mode mode_overdue">غير مدفوعة </span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th><input type="checkbox" name="brand"></th>  
+                                            <td> INV/2023/0079</td>
+                                            <td>13/8/2023</td>
+                                            <td>30/8/2023</td>
+                                            <td>32650</td>
+                                            <td><span class="mode mode_overdue">غير مدفوعة </span></td>
+                                          <td> <button type="button" class="btn btn-sm btn-outline-success w-auto">سداد الان</button> </td>
+
+                                        </tr>         
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+        if (window.innerWidth <= 768) {
+        el.classList.add("toggled"); // Add the "toggled" class for small screens
+    } else {
+        el.classList.remove("toggled"); // Remove the "toggled" class for large screens
+    }
+
+    // Add an event listener to open/close the menu when the button is clicked
+    toggleButton.onclick = function () {
+        el.classList.toggle("toggled");
+    };
+    
+    </script>
+
+<!--chart script-->
+<script>
+    // Get all elements with the class "circular-progress"
+    const progressBars = document.querySelectorAll(".circular-progress");
+  
+    progressBars.forEach((progressBar) => {
+      // Get elements within the current progress bar
+      const valueContainer = progressBar.querySelector(".value-container");
+      
+      let progressValue = 0;
+      const progressEndValue =  parseInt(progressBar.getAttribute('data-end-value'));
+      const speed = 50;
+  
+      let progress = setInterval(() => {
+        progressValue++;
+        valueContainer.textContent = `${progressValue}%`;
+        progressBar.style.background = `conic-gradient(
+            #188b52 ${progressValue * 3.6}deg,
+            #cadcff ${progressValue * 3.6}deg
+        )`;
+        if (progressValue == progressEndValue) {
+          clearInterval(progress);
+        }
+      }, speed);
+    });
+  </script>
+
+ <!-- copy button -->
+ <script>
+    let btn = document.getElementById('btn01');
+    let clipboard = new ClipboardJS(btn);
+
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+<!-- payment form -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+
+<script>
+    $(function($) {
+      $('[data-numeric]').payment('restrictNumeric');
+      $('.cc-number').payment('formatCardNumber');
+      $('.cc-exp').payment('formatCardExpiry');
+      $('.cc-cvc').payment('formatCardCVC');
+      $.fn.toggleInputError = function(erred) {
+        this.parent('.form-group').toggleClass('has-error', erred);
+        return this;
+      };
+      $('form').submit(function(e) {
+        e.preventDefault();
+        var cardType = $.payment.cardType($('.cc-number').val());
+        $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
+        $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').payment('cardExpiryVal')));
+        $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
+        $('.cc-brand').text(cardType);
+        $('.validation').removeClass('text-danger text-success');
+        $('.validation').addClass($('.has-error').length ? 'text-danger' : 'text-success');
+      });
+    });
+</script>
+<script>
+    function toggleCheckboxes() {
+    var items = document.getElementsByName('brand');
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].type == 'checkbox') {
+            items[i].checked = !items[i].checked; // Toggle the checked state
+        }
+    }
+}
+
+      </script>
+<!-- jQuery -->
+<script src='https://code.jquery.com/jquery-3.7.0.js'></script>
+<!-- Data Table JS -->
+<!-- <script src='https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js'></script> -->
+<script src='https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.14/js/jquery.dataTables.min.js"></script>
+
+<!-- <script>
+$(document).ready(function() {
+    $('#example').DataTable({
+      //disable sorting on last column
+      "columnDefs": [
+        { "orderable": false, "targets": 5 }
+      ],
+      language: {
+        //customize pagination prev and next buttons: use arrows instead of words
+        'paginate': {
+          'السابق': '<span class="fa fa-chevron-left"></span>',
+          'التالي': '<span class="fa fa-chevron-right"></span>'
+        },
+        //customize number of elements to be displayed
+        "lengthMenu": '<select class="form-control input-sm">'+
+        '<option value="10">10</option>'+
+        '<option value="20">20</option>'+
+        '<option value="30">30</option>'+
+        '<option value="40">40</option>'+
+        '<option value="50">50</option>'+
+        '</select>'
+      }
+    })  
+} );
+</script> -->
+<script>
+    $(document).ready(function() {
+        var dataTable = $('#filtertable').DataTable({
+            "pageLength":5,
+            'aoColumnDefs':[{
+                'bSortable':false,
+                'aTargets':['nosort'],
+            }],
+            columnDefs:[
+                {type:'date-dd-mm-yyyy',aTargets:[5]}
+            ],
+            "aoColumns":[
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "order":false,
+            "bLengthChange":false,
+            "dom":'<"top">ct<"top"p><"clear">'
+        });
+        $("#filterbox").keyup(function(){
+            dataTable.search(this.value).draw();
+        });
+    } );
+    
+    </script>
+
+    
+<script>
+    // Initialize tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+</script>
+
+    </body>
+
+</html>
